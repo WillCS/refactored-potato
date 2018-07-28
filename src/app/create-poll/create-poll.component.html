@@ -1,3 +1,6 @@
-<p>
-  create-poll works!
-</p>
+<div>
+  <form>
+    <input type = 'text' [(ngModel)] = 'question' placeholder = 'Enter a Question' name = 'question' required>
+    <app-poll-option *ngFor = 'let option of options' [(option)] = 'option'></app-poll-option>
+  </form>
+</div>

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-poll.component.css']
 })
 export class CreatePollComponent implements OnInit {
+  public question: string;
+  public options: string[] = [];
 
-  constructor() { }
+  constructor() { 
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    
+  }
 }
