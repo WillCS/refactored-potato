@@ -1,6 +1,8 @@
 <div>
   <form>
     <input type = 'text' [(ngModel)] = 'question' placeholder = 'Enter a Question' name = 'question' required>
-    <app-poll-option *ngFor = 'let option of options' [(option)] = 'option'></app-poll-option>
+    <app-poll-option *ngFor = 'let option of options;' option = 'option {{ i }}'></app-poll-option>
+    <br />
+    <button (click) = 'addOption()'>+ Add Option</button>
   </form>
 </div>

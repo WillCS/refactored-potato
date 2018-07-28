@@ -6,20 +6,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./poll-option.component.css']
 })
 export class PollOptionComponent implements OnInit {
-  private _option: string;
+  private _option: number;
 
   @Input()
-  public set option(value: string) {
+  public set option(value: number) {
     this._option = value;
     this.optionChange.emit(this._option);
   }
 
-  public get option(): string {
+  public get option(): number {
     return this._option;
   }
 
   @Output()
-  public optionChange: EventEmitter<string> = new EventEmitter<string>();
+  public optionChange: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
 

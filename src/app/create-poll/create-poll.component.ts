@@ -14,6 +14,10 @@ export class CreatePollComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+
+  }
+
+  public addOption(): void {
+    this.options.push(`Option ${this.options.length}`);
   }
 }
