@@ -1,8 +1,11 @@
 <div>
-  <form>
+  <form (ngSubmit) = 'createPoll()' #createForm = 'ngForm'>
     <input type = 'text' [(ngModel)] = 'question' placeholder = 'Enter a Question' name = 'question' required>
-    <app-poll-option *ngFor = 'let option of options;' option = 'option {{ i }}'></app-poll-option>
-    <br />
+    <div *ngFor = 'let i of optionsRange'>
+      <button (click) = 'deleteOption(i)'>delete</button>
+      <input type = 'text' [(ngModel)] = 'options[i]' placeholder = 'Option {{i}}' name = 'option{{i}}' required>
+    </div>
     <button (click) = 'addOption()'>+ Add Option</button>
+    <button type = 'submit' [disabled] = '!createForm.form.valid'>Create</button>
   </form>
 </div>
